@@ -1,0 +1,98 @@
+/* General styling for the page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe0b3; /* Warm background color for the card */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 650px;
+  background: linear-gradient(135deg, #f9c74f, #f2727f); /* Festive gradient */
+}
+
+.greeting-title {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.greeting-message {
+  font-size: 20px;
+  color: #6eae5c;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+
+.toggle-button {
+  display: inline-block;
+  padding: 19px 30px;
+  font-size: 20px;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.toggle-button:hover {
+  background-color: lightsalmon;
+  transform: scale(1.05);
+}
+
+.image-description {
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.image {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+.toggle-checkbox:checked + .toggle-button + .image {
+  display: block;
+  opacity: 1;
+}
+
+.toggle-checkbox:checked + .toggle-button + .image + .image-description {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Add a festive pattern or element */
+.card-container::before {
+  content: "🌾";
+  font-size: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-container::after {
+  content: "🌾";
+  font-size: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
